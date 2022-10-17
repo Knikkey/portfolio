@@ -1,0 +1,39 @@
+.half-width {
+  width: 50%;
+}
+
+.project-subtitle {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.dropdown-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.small-text {
+  font-size: 1.5rem;
+}
+
+.bullet-dropdown-closed {
+  height: 0;
+  opacity: 0;
+  transition: all 0.5s;
+
+  overflow: hidden;
+}
+
+.bullet-dropdown-open {
+  height: 10rem;
+  opacity: 1;
+  transition: all 0.5s;
+}

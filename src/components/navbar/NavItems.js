@@ -1,7 +1,14 @@
+import { Link } from "react-router-dom";
+
 import styles from "./NavItems.module.css";
 import resume from "../resume/Nicholas Bingham Resume.pdf";
 
-const pages = ["Home", "My Projects", "About Me", "Contact Me"];
+const pages = [
+  { label: "Home", path: "/" },
+  { label: "My Projects", path: "/projects" },
+  { label: "About Me", path: "/bio" },
+  { label: "Contact Me", path: "/contact" },
+];
 const externals = [
   {
     name: "Github",
@@ -13,18 +20,14 @@ const externals = [
   },
 ];
 
-export default function NavItems({ pageHandler }) {
+export default function NavItems() {
   return (
     <ul className={styles["nav"]}>
       {pages.map((page, i) => (
         <li key={i} className={styles.li}>
-          <button
-            value={page}
-            className={styles["page-nav"]}
-            onClick={pageHandler}
-          >
-            {page}
-          </button>
+          <Link to={page.path} className={styles["page-nav"]}>
+            {page.label}
+          </Link>
         </li>
       ))}
       {externals.map((external) => (

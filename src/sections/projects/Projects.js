@@ -2,9 +2,10 @@ import { useState } from "react";
 import { database, collection, getDocs } from "../../firebase/config";
 
 import Filter from "../../components/filter/Filter";
-import dropdown from "./icons/dropdown.svg";
+// import dropdown from "./icons/dropdown.svg";
 
 import styles from "./Projects.module.css";
+import Accordion from "../../components/accordion/Accordion";
 
 const langFilter = [
   { label: "All languages", value: "all" },
@@ -57,15 +58,6 @@ export default function Projects() {
       setError(err);
     }
   })();
-
-  const openDropdown = (e) => {
-    e.currentTarget.nextElementSibling.classList.toggle(
-      styles["bullet-dropdown-open"]
-    );
-    e.currentTarget.nextElementSibling.classList.toggle(
-      styles["bullet-dropdown-closed"]
-    );
-  };
 
   return (
     <div className="section fadeIn">
@@ -142,7 +134,12 @@ export default function Projects() {
                 {/* bullet box */}
                 <div className={styles["bullet-container"]}>
                   {/* features */}
-                  <div style={{ width: "50%" }}>
+                  <Accordion label="Features" data={project.features} />
+                  <Accordion
+                    label="Concepts Learned"
+                    data={project.learnedList}
+                  />
+                  {/* <div style={{ width: "50%" }}>
                     <div
                       className={`${styles["project-subtitle"]} ${styles.dropdown}`}
                       onClick={openDropdown}
@@ -165,9 +162,9 @@ export default function Projects() {
                         );
                       })}
                     </ul>
-                  </div>
+                  </div> */}
                   {/* learned list */}
-                  <div style={{ width: "50%" }}>
+                  {/* <div style={{ width: "50%" }}>
                     <div
                       className={`${styles["project-subtitle"]} ${styles.dropdown}`}
                       onClick={openDropdown}
@@ -190,7 +187,7 @@ export default function Projects() {
                         );
                       })}
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* biggest challenge */}
