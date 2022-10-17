@@ -59,10 +59,6 @@
 }
 
 /************ Regular text ************/
-.small-text {
-  font-size: 1.5rem;
-}
-
 .loading {
   font-size: 2.4rem;
   text-align: center;
@@ -85,6 +81,10 @@
   font-size: 1.6rem;
 }
 
+.small-text {
+  font-size: 1.5rem;
+}
+
 /************ General ************/
 
 .flex {
@@ -100,33 +100,6 @@
 
   padding: 1rem 0;
   align-self: center;
-}
-
-.dropdown {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  cursor: pointer;
-  width: fit-content;
-}
-
-.dropdown-icon {
-  width: 25px;
-  height: 25px;
-}
-
-.bullet-dropdown-closed {
-  height: 0;
-  opacity: 0;
-  transition: all 0.5s;
-
-  overflow: hidden;
-}
-
-.bullet-dropdown-open {
-  height: 10rem;
-  opacity: 1;
-  transition: all 0.5s;
 }
 
 .li {
