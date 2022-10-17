@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { database, collection, getDocs } from "../../firebase/config";
 
 import Filter from "../../components/filter/Filter";
@@ -21,6 +21,7 @@ export default function Projects() {
   const [projects, setProjects] = useState(null);
   const [filter, setFilter] = useState("All languages");
   const [sort, setSort] = useState("new");
+  const [error, setError] = useState(null);
 
   const filterHandler = (e) => {
     setFilter(e.target.value);
@@ -46,15 +47,16 @@ export default function Projects() {
         })
       : filteredProjects;
 
-  useEffect(() => {
-    async function getProjects() {
-      const projectsCol = collection(database, "projects");
+  (async () => {
+    const projectsCol = collection(database, "projects");
+    try {
       const snapshot = await getDocs(projectsCol);
       const projectsList = snapshot.docs.map((doc) => doc.data());
       setProjects(projectsList);
+    } catch (err) {
+      setError(err);
     }
-    getProjects();
-  }, []);
+  })();
 
   const openDropdown = (e) => {
     e.currentTarget.nextElementSibling.classList.toggle(
@@ -78,7 +80,9 @@ export default function Projects() {
       </div>
 
       {!sortedProjects ? (
-        <p className={styles.loading}>Loading...</p>
+        <p className={styles.loading}>
+          {!error ? "Loading..." : `An error occured (Error message: ${error})`}
+        </p>
       ) : (
         <ul className={`${styles["projects-container"]} flex-col fadeIn`}>
           {sortedProjects.map((project) => (
