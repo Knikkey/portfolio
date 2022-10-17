@@ -2,16 +2,16 @@ import { useState } from "react";
 import { database, collection, getDocs } from "../../firebase/config";
 
 import Filter from "../../components/filter/Filter";
-// import dropdown from "./icons/dropdown.svg";
+import dropdown from "./icons/dropdown.svg";
 
 import styles from "./Projects.module.css";
 import Accordion from "../../components/accordion/Accordion";
 
 const langFilter = [
-  { label: "All languages", value: "all" },
-  { label: "Vanilla JavaScript", value: "js" },
-  { label: "React", value: "react" },
-  { label: "Firebase", value: "firebase" },
+  { label: "All languages", value: "All languages" },
+  { label: "Vanilla JavaScript", value: "Vanilla JavaScript" },
+  { label: "React", value: "React" },
+  { label: "Firebase", value: "Firebase" },
 ];
 const dateFilter = [
   { label: "Date (newest)", value: "new" },
