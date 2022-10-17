@@ -46,21 +46,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.nav {
-  display: flex;
-  gap: 4rem;
-  font-size: 2.4rem;
-  margin-top: auto;
-  padding: 0;
-}
-
-/************ General ************/
-.li {
-  z-index: 1;
-  color: #80502a;
-}
-
-.li:hover {
-  color: white;
-}

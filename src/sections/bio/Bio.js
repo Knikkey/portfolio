@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import pics from "./pics";
 import styles from "./Bio.module.css";
 
+const lengths = ["Short", "Medium", "Long"];
+
 export default function Bio() {
   const [bioLength, setBioLength] = useState("short");
 
@@ -25,26 +27,10 @@ export default function Bio() {
   }, []);
 
   const lengthHandler = (e) => {
-    setBioLength(e.target.getAttribute("id"));
+    setBioLength(e.target.value.toLowerCase());
   };
 
   const pic = useRef();
-
-  const shortBio = `I am a front-end developer who was born and raised in Hawaii.
-  Being naturally curious and creative, I have found web
-  development to be an excellent fit for me.`;
-
-  const mediumBio = `I have lived abroad for a total of 10 years and am proficient
-  in two foreign languages, which helps me
-  know exactly what I need in order to learn languages, including programming languages. This along with my 8 years of teaching experience has helped me hone my communication skills, making me a valuble team member.`;
-
-  const longBio = `My hobbies include weightlifting and playing video games. I've
-  found weightlifting to be great at molding not only the
-  physical body, but the mind as well. It has taught me how
-  important qualities such as keeping to a routine, consistantly improving, and
-  producing quality work can be. Video games have taught me
-  how to look at how to improve myself rather than to blame
-  outside forces for failure.`;
 
   return (
     <div className="section fadeIn">
@@ -56,47 +42,40 @@ export default function Bio() {
           <div className={`flex-col ${styles["bio-info"]}`}>
             {/* selectors */}
             <ul className={styles["length-container"]}>
-              <li key="1" className={styles["selection-container"]}>
-                <div
-                  className={`${styles.dots} ${
-                    bioLength === "short" ? styles.active : ""
-                  }`}
-                  id="short"
-                  onClick={lengthHandler}
-                ></div>
-                <div className={styles["length-words"]}>Short</div>
-              </li>
-              <li key="2" className={styles["selection-container"]}>
-                <div
-                  className={`${styles.dots} ${
-                    bioLength === "medium" ? styles.active : ""
-                  }`}
-                  id="medium"
-                  onClick={lengthHandler}
-                ></div>
-                <div className={styles["length-words"]}>Medium</div>
-              </li>
-              <li key="3" className={styles["selection-container"]}>
-                <div
-                  className={`${styles.dots} ${
-                    bioLength === "long" ? styles.active : ""
-                  }`}
-                  id="long"
-                  onClick={lengthHandler}
-                ></div>
-                <div className={styles["length-words"]}>Long</div>
-              </li>
+              {lengths.map((length, i) => (
+                <li key={length} className={styles["selection-container"]}>
+                  <input
+                    defaultChecked={i === 0}
+                    type="radio"
+                    name="length"
+                    id={length}
+                    value={length}
+                    className={styles.dots}
+                    onClick={lengthHandler}
+                  />
+                  <label htmlFor={length}>{length}</label>
+                </li>
+              ))}
             </ul>
             {/* bio text */}
             <div>
-              <p>{shortBio}</p>
+              <p>
+                I am a front-end developer who was born and raised in Hawaii.
+                Being naturally curious and creative, I have found web
+                development to be an excellent fit for me.
+              </p>
               {bioLength === "medium" || bioLength === "long" ? (
                 <p
                   className={
                     prevBioLength.current === "short" ? styles["bio-fade"] : ""
                   }
                 >
-                  {mediumBio}
+                  I have lived abroad for a total of 10 years and am proficient
+                  in two foreign languages, which helps me know exactly what I
+                  need in order to learn languages, including programming
+                  languages. This along with my 8 years of teaching experience
+                  has helped me hone my communication skills, making me a
+                  valuble team member.
                 </p>
               ) : (
                 ""
@@ -111,7 +90,13 @@ export default function Bio() {
                       : ""
                   }
                 >
-                  {longBio}
+                  My hobbies include weightlifting and playing video games. I've
+                  found weightlifting to be great at molding not only the
+                  physical body, but the mind as well. It has taught me how
+                  important qualities such as keeping to a routine, consistantly
+                  improving, and producing quality work can be. Video games have
+                  taught me how to look at how to improve myself rather than to
+                  blame outside forces for failure.
                 </p>
               )}
             </div>

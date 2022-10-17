@@ -25,11 +25,8 @@
 /************ Containers ************/
 .length-container {
   display: flex;
-  justify-content: center;
-  transform: translateX(-25%);
-
   gap: 2rem;
-  margin-inline: 1.2rem;
+  padding: 0;
 }
 
 .selection-container {
@@ -47,7 +44,7 @@
   height: 65%;
   width: 100%;
   gap: 2rem;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   margin: 0;
 }
 
@@ -56,8 +53,7 @@
 .dots {
   width: 2rem;
   height: 2rem;
-  border: black solid 1px;
-  border-radius: 50%;
+  accent-color: black;
 
   cursor: pointer;
 
@@ -66,11 +62,6 @@
 
 .dots:hover {
   background-color: #999;
-}
-
-.active,
-.active:hover {
-  background-color: black;
 }
 
 .bio-info {

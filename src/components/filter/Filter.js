@@ -1,18 +1,13 @@
 import styles from "./Filter.module.css";
 
-export default function Filter({ setFilter }) {
-  const filterHandler = (e) => {
-    setFilter(e.target.value);
-  };
-
+export default function Filter({ label, arr, handler }) {
   return (
     <div className={`flex-col ${styles.filter}`}>
-      <label className={styles.label}>Filter by language:</label>
-      <select className={styles.select} onChange={filterHandler}>
-        <option>All languages</option>
-        <option>Vanilla JavaScript</option>
-        <option>React</option>
-        <option>Firebase</option>
+      <label className={styles.label}>{label}:</label>
+      <select className={styles.select} onChange={handler}>
+        {arr.map((el) => (
+          <option value={el.value}>{el.label}</option>
+        ))}
       </select>
     </div>
   );

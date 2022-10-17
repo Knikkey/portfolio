@@ -1,16 +1,34 @@
 import { useEffect, useState } from "react";
 import { database, collection, getDocs } from "../../firebase/config";
 
-import SortFilter from "../../components/filter/SortFilter";
 import Filter from "../../components/filter/Filter";
 import dropdown from "./icons/dropdown.svg";
 
 import styles from "./Projects.module.css";
 
+const langFilter = [
+  { label: "All languages", value: "all" },
+  { label: "Vanilla JavaScript", value: "js" },
+  { label: "React", value: "react" },
+  { label: "Firebase", value: "firebase" },
+];
+const dateFilter = [
+  { label: "Date (newest)", value: "new" },
+  { label: "Date (oldest)", value: "old" },
+];
+
 export default function Projects() {
   const [projects, setProjects] = useState(null);
   const [filter, setFilter] = useState("All languages");
   const [sort, setSort] = useState("new");
+
+  const filterHandler = (e) => {
+    setFilter(e.target.value);
+  };
+
+  const sortHandler = (e) => {
+    setSort(e.target.value);
+  };
 
   const filteredProjects = projects
     ? projects.filter((project) => {
@@ -50,9 +68,13 @@ export default function Projects() {
   return (
     <div className="section fadeIn">
       <div className={styles["filter-container"]}>
-        <SortFilter setSort={setSort} />
+        <Filter
+          label="Filter by language"
+          arr={langFilter}
+          handler={filterHandler}
+        />
         <p className="page-header">My Projects</p>
-        <Filter setFilter={setFilter} />
+        <Filter label="Sort by" arr={dateFilter} handler={sortHandler} />
       </div>
 
       {!sortedProjects ? (

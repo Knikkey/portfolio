@@ -1,7 +1,7 @@
 import styles from "./NavItems.module.css";
 import resume from "../resume/Nicholas Bingham Resume.pdf";
 
-const pages = ["Home", "My Projects", "About Me"];
+const pages = ["Home", "My Projects", "About Me", "Contact Me"];
 const externals = [
   {
     name: "Github",
@@ -9,81 +9,36 @@ const externals = [
   },
   {
     name: "Resume",
-    link: { resume },
+    link: resume,
   },
 ];
 
-export default function NavItems({ ulClass, liClass, setPage }) {
-  const pageHandler = (e) => {
-    //setPage found in App.js
-    setPage(e.target.value);
-  };
-
+export default function NavItems({ pageHandler }) {
   return (
-    <nav>
-      <ul className={ulClass}>
-        <li className={`${liClass}`}>
+    <ul className={styles["nav"]}>
+      {pages.map((page, i) => (
+        <li key={i} className={styles.li}>
           <button
-            value="home"
+            value={page}
             className={styles["page-nav"]}
             onClick={pageHandler}
           >
-            Home
+            {page}
           </button>
         </li>
-
-        <li className={`${liClass}`}>
-          <button
-            value="projects"
-            className={styles["page-nav"]}
-            onClick={pageHandler}
-          >
-            My Projects
-          </button>
-        </li>
-
-        <li className={`${liClass}`}>
-          <button
-            value="aboutme"
-            className={styles["page-nav"]}
-            onClick={pageHandler}
-          >
-            About Me
-          </button>
-        </li>
-
-        <li className={`${liClass}`}>
-          <button
-            value="contactme"
-            className={styles["page-nav"]}
-            onClick={pageHandler}
-          >
-            Contact Me
-          </button>
-        </li>
-
-        <li className={`${styles.li} ${liClass}`}>
+      ))}
+      {externals.map((external) => (
+        <li key={external.link} className={styles.li}>
           <a
-            href="https://github.com/Knikkey"
+            href={external.link}
             target="_blank"
             rel="noreferrer noopener"
             className={styles.a}
           >
-            GitHub
+            {external.name}
           </a>
         </li>
-
-        <li className={`${styles.li} ${liClass}`}>
-          <a
-            href={resume}
-            target="_blank"
-            rel="noreferrer noopener"
-            className={styles.a}
-          >
-            Resume
-          </a>
-        </li>
-      </ul>
-    </nav>
+      ))}
+    </ul>
   );
 }

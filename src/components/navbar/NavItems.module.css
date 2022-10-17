@@ -22,3 +22,20 @@
 .a:hover {
   color: #997355;
 }
+
+.nav {
+  display: flex;
+  gap: 4rem;
+  font-size: 2.4rem;
+  margin-top: auto;
+  padding: 0;
+}
+
+.li {
+  z-index: 1;
+  color: #80502a;
+}
+
+.li:hover {
+  color: white;
+}
