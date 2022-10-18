@@ -87,5 +87,13 @@
   }
 }
 
-@media (max-width: 32em) {
+@media (max-width: 27em) {
+  .logo {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+
+  .languages {
+    font-size: 0.8rem;
+  }
 }

@@ -165,3 +165,9 @@
     font-size: 2.2rem;
   }
 }
+
+@media (max-width: 27em) {
+  .title {
+    font-size: 1.6rem;
+  }
+}

@@ -149,55 +149,6 @@ export default function Projects() {
                     data={project.learnedList}
                     cl={styles["dropdown-query"]}
                   />
-                  {/* <div style={{ width: "50%" }}>
-                    <div
-                      className={`${styles["project-subtitle"]} ${styles.dropdown}`}
-                      onClick={openDropdown}
-                    >
-                      <p>Features:</p>
-                      <img
-                        className={styles["dropdown-icon"]}
-                        src={dropdown}
-                        alt="dropdown menu icon"
-                      />
-                    </div>
-                    <ul
-                      className={`${styles["small-text"]} ${styles["bullet-dropdown-closed"]}`}
-                    >
-                      {project.features.map((feature) => {
-                        return (
-                          <li key={feature.trim()} className={styles.li}>
-                            {feature}
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div> */}
-                  {/* learned list */}
-                  {/* <div style={{ width: "50%" }}>
-                    <div
-                      className={`${styles["project-subtitle"]} ${styles.dropdown}`}
-                      onClick={openDropdown}
-                    >
-                      <p>Concepts learned:</p>
-                      <img
-                        className={styles["dropdown-icon"]}
-                        src={dropdown}
-                        alt="dropdown menu icon"
-                      />
-                    </div>
-                    <ul
-                      className={`${styles["small-text"]} ${styles["bullet-dropdown-closed"]}`}
-                    >
-                      {project.learnedList.map((concept) => {
-                        return (
-                          <li key={concept.trim()} className={styles.li}>
-                            {concept}
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div> */}
                 </div>
 
                 {/* biggest challenge */}
