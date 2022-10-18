@@ -155,8 +155,16 @@
   }
 
   .project-info-container {
-    width: 100%;
+    width: 90%;
     align-items: center;
+  }
+
+  .project-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
   }
 }
 

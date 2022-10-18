@@ -42,3 +42,10 @@
   list-style: square;
   margin-bottom: 10px;
 }
+
+@media (max-width: 32em) {
+  .dropdown-icon {
+    height: 15px;
+    width: 15px;
+  }
+}

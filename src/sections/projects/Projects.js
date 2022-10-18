@@ -156,7 +156,7 @@ export default function Projects() {
                   <p className={styles["project-subtitle"]}>
                     Biggest challenge in this project:
                   </p>
-                  <p className={styles["small-text"]}>
+                  <p className={styles.description}>
                     {project.biggestChallenge}
                   </p>
                 </div>

@@ -14,7 +14,7 @@ export default function Accordion({ label, data, cl }) {
         className={`${styles["project-subtitle"]} ${styles.dropdown} ${cl}`}
         onClick={openDropdown}
       >
-        <p>{label}:</p>
+        <p className={cl}>{label}:</p>
         <img
           className={styles["dropdown-icon"]}
           src={dropdown}
