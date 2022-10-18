@@ -87,3 +87,46 @@
 
   animation: slideshow ease-in infinite 6s;
 }
+
+@media (max-width: 92em) {
+  .bio-info {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 70em) {
+  .bio-info {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 60em) {
+  .bio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    padding-left: 0;
+    height: 100%;
+  }
+
+  .dots {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .length-container {
+    font-size: 1.2rem;
+  }
+
+  .bio-info {
+    /* font-size: 1.2rem; */
+    max-width: 90%;
+  }
+
+  .pictures {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+  }
+}

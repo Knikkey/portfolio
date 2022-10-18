@@ -40,3 +40,9 @@
 .btn:hover {
   background-color: #f2e4ce;
 }
+
+@media (max-width: 38em) {
+  input {
+    width: 90%;
+  }
+}

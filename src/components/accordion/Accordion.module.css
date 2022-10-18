@@ -33,7 +33,7 @@
 }
 
 .bullet-dropdown-open {
-  height: 10rem;
+  height: 18rem;
   opacity: 1;
   transition: all 0.5s;
 }

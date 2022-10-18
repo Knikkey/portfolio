@@ -65,9 +65,15 @@ export default function Projects() {
           label="Filter by language"
           arr={langFilter}
           handler={filterHandler}
+          cl={styles.filter}
         />
-        <p className="page-header">My Projects</p>
-        <Filter label="Sort by" arr={dateFilter} handler={sortHandler} />
+        <p className={`page-header ${styles.title}`}>My Projects</p>
+        <Filter
+          label="Sort by"
+          arr={dateFilter}
+          handler={sortHandler}
+          cl={styles.filter}
+        />
       </div>
 
       {!sortedProjects ? (
@@ -133,10 +139,15 @@ export default function Projects() {
                 {/* bullet box */}
                 <div className={styles["bullet-container"]}>
                   {/* features */}
-                  <Accordion label="Features" data={project.features} />
+                  <Accordion
+                    label="Features"
+                    data={project.features}
+                    cl={styles["dropdown-query"]}
+                  />
                   <Accordion
                     label="Concepts Learned"
                     data={project.learnedList}
+                    cl={styles["dropdown-query"]}
                   />
                   {/* <div style={{ width: "50%" }}>
                     <div

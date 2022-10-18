@@ -27,6 +27,7 @@
 .title,
 .occupation {
   font-family: Montserrat;
+  text-align: center;
 }
 
 .title {
@@ -34,6 +35,7 @@
   font-weight: 800;
   letter-spacing: -4px;
   margin-top: auto;
+  width: 100%;
 }
 
 .occupation {
@@ -54,4 +56,36 @@
   text-align: center;
   line-height: 0;
   color: #26180d;
+}
+
+@media (max-width: 56em) {
+  .title {
+    font-size: 6.4rem;
+  }
+
+  .occupation {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 39em) {
+  .title {
+    font-size: 5.4rem;
+  }
+
+  .occupation {
+    font-size: 3rem;
+  }
+
+  .logo {
+    height: 3.6rem;
+    width: 3.6rem;
+  }
+
+  .languages {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 32em) {
 }

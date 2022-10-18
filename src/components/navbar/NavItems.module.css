@@ -1,11 +1,30 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .a {
   color: #80502a;
   text-decoration: underline;
-  transition: all 0.3s;
-}
-
-.a:hover {
-  cursor: pointer;
   transition: all 0.3s;
 }
 
@@ -14,13 +33,17 @@
   background-color: inherit;
   font-size: 2.4rem;
   color: #664022;
-  cursor: pointer;
+
   transition: all 0.3s;
 }
 
 .page-nav:hover,
-.a:hover {
+.a:hover,
+.li:hover {
   color: #997355;
+  animation: shake 0.8s linear;
+
+  cursor: pointer;
 }
 
 .nav {
@@ -36,6 +59,84 @@
   color: #80502a;
 }
 
-.li:hover {
-  color: white;
+.menu-btn {
+  display: none;
+}
+
+.menu-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.menu-btn--spin {
+  animation: spin ease-out 0.4s;
+}
+
+.menu-btn--reverse-spin {
+  animation: spin ease-out 0.4s reverse;
+}
+
+@media (max-width: 56em) {
+  .page-nav,
+  .nav {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .page-nav,
+  .nav {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 39em) {
+  .menu-btn {
+    display: block;
+    position: fixed;
+    top: 3%;
+    right: 6%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .page-nav,
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-end;
+    font-size: 1.6rem;
+  }
+
+  nav {
+    position: fixed;
+    top: 4%;
+    right: 16%;
+    height: 0;
+    overflow: hidden;
+
+    transition: all 0.4s;
+    background: #f8f0e3;
+  }
+
+  nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://i.ytimg.com/vi/mfycQJrzXCA/maxresdefault.jpg")
+      repeat center;
+    opacity: 0.7;
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+
+  .show-menu {
+    height: 15rem;
+  }
 }

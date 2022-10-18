@@ -2,7 +2,7 @@ import dropdown from "./dropdown.svg";
 
 import styles from "./Accordion.module.css";
 
-export default function Accordion({ label, data }) {
+export default function Accordion({ label, data, cl }) {
   const openDropdown = (e) => {
     e.currentTarget.nextElementSibling.classList.toggle(
       styles["bullet-dropdown-open"]
@@ -11,7 +11,7 @@ export default function Accordion({ label, data }) {
   return (
     <div className={styles["half-width"]}>
       <div
-        className={`${styles["project-subtitle"]} ${styles.dropdown}`}
+        className={`${styles["project-subtitle"]} ${styles.dropdown} ${cl}`}
         onClick={openDropdown}
       >
         <p>{label}:</p>
@@ -22,7 +22,7 @@ export default function Accordion({ label, data }) {
         />
       </div>
       <ul
-        className={`${styles["small-text"]} ${styles["bullet-dropdown-closed"]}`}
+        className={`${styles["small-text"]} ${styles["bullet-dropdown-closed"]} ${cl}`}
       >
         {data.map((el) => {
           return (

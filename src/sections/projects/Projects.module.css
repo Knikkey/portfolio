@@ -120,3 +120,48 @@
   background-color: #aaa;
   border-radius: 100vh;
 }
+
+@media (max-width: 84em) {
+  .dropdown-query {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 46em) {
+  .title {
+    font-size: 3.8rem;
+  }
+
+  .filter {
+    font-size: 1.2rem;
+  }
+
+  .dropdown-query {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 39em) {
+  .title {
+    font-size: 2.8rem;
+  }
+
+  .filter {
+    font-size: 1rem;
+  }
+
+  .gif {
+    display: none;
+  }
+
+  .project-info-container {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 33em) {
+  .title {
+    font-size: 2.2rem;
+  }
+}
