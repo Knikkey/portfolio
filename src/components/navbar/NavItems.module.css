@@ -140,3 +140,9 @@
     height: 16rem;
   }
 }
+
+@media (max-width: 27em) {
+  nav {
+    right: 18%;
+  }
+}

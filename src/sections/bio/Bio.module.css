@@ -131,7 +131,7 @@
   }
 }
 
-@media (max-width: 60em) {
+@media (max-width: 27em) {
   .bio-info {
     font-size: 1.2rem;
   }
