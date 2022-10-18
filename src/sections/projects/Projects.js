@@ -2,7 +2,6 @@ import { useState } from "react";
 import { database, collection, getDocs } from "../../firebase/config";
 
 import Filter from "../../components/filter/Filter";
-import dropdown from "./icons/dropdown.svg";
 
 import styles from "./Projects.module.css";
 import Accordion from "../../components/accordion/Accordion";
