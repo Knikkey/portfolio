@@ -185,15 +185,20 @@
   .title {
     font-size: 2.2rem;
   }
+
+  .languages,
+  .links {
+    font-size: 1.4rem;
+  }
+
+  .project-info-container {
+    padding-left: 2rem;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 27em) {
   .title {
     font-size: 1.6rem;
-  }
-
-  .languages,
-  .links {
-    font-size: 1.4rem;
   }
 }
