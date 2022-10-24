@@ -47,16 +47,16 @@ export default function Projects() {
         })
       : filteredProjects;
 
-  // (async () => {
-  //   const projectsCol = collection(database, "projects");
-  //   try {
-  //     const snapshot = await getDocs(projectsCol);
-  //     const projectsList = snapshot.docs.map((doc) => doc.data());
-  //     setProjects(projectsList);
-  //   } catch (err) {
-  //     setError(err);
-  //   }
-  // })();
+  (async () => {
+    const projectsCol = collection(database, "projects");
+    try {
+      const snapshot = await getDocs(projectsCol);
+      const projectsList = snapshot.docs.map((doc) => doc.data());
+      setProjects(projectsList);
+    } catch (err) {
+      setError(err);
+    }
+  })();
 
   return (
     <div className="section fadeIn">
