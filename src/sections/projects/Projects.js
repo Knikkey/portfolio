@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { database, collection, getDocs } from "../../firebase/config";
 
 import Filter from "../../components/filter/Filter";
@@ -57,6 +57,31 @@ export default function Projects() {
       setError(err);
     }
   })();
+
+  //with useRef()
+  // const projects = useRef(null);
+
+  // const requestDocs = async () => {
+  //   const projectsCol = collection(database, "projects");
+  //   try {
+  //     const snapshot = await getDocs(projectsCol);
+  //     const projectsList = snapshot.docs.map((doc) => doc.data());
+  //     projects.current = projectsList;
+  //   } catch (err) {
+  //     setError(err);
+  //   }
+  // };
+
+  // !projects && requestDocs()
+
+  // const filteredProjects = projects.current
+  //   ? projects.current.filter((project) => {
+  //       if (filter === "All languages") return true;
+  //       else {
+  //         return project.languages.includes(filter);
+  //       }
+  //     })
+  //   : null;
 
   return (
     <div className="section fadeIn">
