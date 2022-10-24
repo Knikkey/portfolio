@@ -121,6 +121,19 @@
   border-radius: 100vh;
 }
 
+.current-project {
+  display: inline-block;
+  font-size: 1.6rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.current-project__emph {
+  font-weight: bold;
+  font-style: italic;
+}
+
 @media (max-width: 84em) {
   .dropdown-query {
     font-size: 1.2rem;
@@ -177,5 +190,10 @@
 @media (max-width: 27em) {
   .title {
     font-size: 1.6rem;
+  }
+
+  .languages,
+  .links {
+    font-size: 1.4rem;
   }
 }

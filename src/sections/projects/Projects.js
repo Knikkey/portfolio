@@ -47,16 +47,16 @@ export default function Projects() {
         })
       : filteredProjects;
 
-  (async () => {
-    const projectsCol = collection(database, "projects");
-    try {
-      const snapshot = await getDocs(projectsCol);
-      const projectsList = snapshot.docs.map((doc) => doc.data());
-      setProjects(projectsList);
-    } catch (err) {
-      setError(err);
-    }
-  })();
+  // (async () => {
+  //   const projectsCol = collection(database, "projects");
+  //   try {
+  //     const snapshot = await getDocs(projectsCol);
+  //     const projectsList = snapshot.docs.map((doc) => doc.data());
+  //     setProjects(projectsList);
+  //   } catch (err) {
+  //     setError(err);
+  //   }
+  // })();
 
   return (
     <div className="section fadeIn">
@@ -75,6 +75,14 @@ export default function Projects() {
           cl={styles.filter}
         />
       </div>
+
+      <span className={styles["current-project"]}>
+        Currently working on a{" "}
+        <span className={styles["current-project__emph"]}>
+          fitness related app
+        </span>
+        . Coming soon!
+      </span>
 
       {!sortedProjects ? (
         <p className={styles.loading}>

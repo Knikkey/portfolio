@@ -33,7 +33,7 @@
 }
 
 .bullet-dropdown-open {
-  height: 18rem;
+  height: 20rem;
   opacity: 1;
   transition: all 0.5s;
 }
@@ -44,6 +44,10 @@
 }
 
 @media (max-width: 32em) {
+  .dropdown {
+    gap: 0.4rem;
+  }
+
   .dropdown-icon {
     height: 15px;
     width: 15px;
