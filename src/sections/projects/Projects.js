@@ -111,7 +111,6 @@ export default function Projects() {
           const snapshot = await getDocs(projectsCol);
           const projectsList = snapshot.docs.map((doc) => doc.data());
           setProjects(projectsList);
-          // window.localStorage.setItem("PROJECTS", JSON.stringify(projectsList));
           window.sessionStorage.setItem(
             "PROJECTS",
             JSON.stringify(projectsList)
@@ -121,7 +120,6 @@ export default function Projects() {
         }
       };
       requestDocs();
-      // const data = window.localStorage.getItem("PROJECTS");
       const data = window.sessionStorage.getItem("PROJECTS");
       setProjects(JSON.parse(data));
     }
