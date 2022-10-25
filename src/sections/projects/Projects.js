@@ -20,8 +20,11 @@ const dateFilter = [
 export default function Projects() {
   //const [projects, setProjects] = useState(null);
   //const [projectss, setProjectss] = useState(null);
+  // const [projects, setProjects] = useState(
+  //   JSON.parse(window.localStorage.getItem("PROJECTS"))
+  // );
   const [projects, setProjects] = useState(
-    JSON.parse(window.localStorage.getItem("PROJECTS"))
+    JSON.parse(window.sessionStorage.getItem("PROJECTS"))
   );
   const [filter, setFilter] = useState("All languages");
   const [sort, setSort] = useState("new");
@@ -107,13 +110,19 @@ export default function Projects() {
         try {
           const snapshot = await getDocs(projectsCol);
           const projectsList = snapshot.docs.map((doc) => doc.data());
-          window.localStorage.setItem("PROJECTS", JSON.stringify(projectsList));
+          setProjects(projectsList);
+          // window.localStorage.setItem("PROJECTS", JSON.stringify(projectsList));
+          window.sessionStorage.setItem(
+            "PROJECTS",
+            JSON.stringify(projectsList)
+          );
         } catch (err) {
           setError(err);
         }
       };
       requestDocs();
-      const data = window.localStorage.getItem("PROJECTS");
+      // const data = window.localStorage.getItem("PROJECTS");
+      const data = window.sessionStorage.getItem("PROJECTS");
       setProjects(JSON.parse(data));
     }
   }, [projects]);
