@@ -33,7 +33,7 @@
 }
 
 .bullet-dropdown-open {
-  height: 20rem;
+  height: 21rem;
   opacity: 1;
   transition: all 0.5s;
 }
@@ -43,13 +43,37 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 32em) {
+@media (max-width: 57em) {
+  .li {
+    font-size: 1.2rem;
+  }
+
+  .bullet-dropdown-open {
+    height: 22rem;
+  }
+}
+
+@media (max-width: 57em) {
+  .li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 39em) {
   .dropdown {
     gap: 0.4rem;
+  }
+
+  .bullet-dropdown-open {
+    height: 11rem;
   }
 
   .dropdown-icon {
     height: 15px;
     width: 15px;
+  }
+
+  .li {
+    font-size: 0.8rem;
   }
 }

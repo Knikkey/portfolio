@@ -29,6 +29,7 @@
 
 .project-info-container {
   gap: 1rem;
+  align-items: flex-start;
 
   padding: 2rem 0 0 4rem;
 }
@@ -36,6 +37,7 @@
 .bullet-container {
   display: flex;
   gap: 0.8rem;
+  justify-content: space-between;
   padding-bottom: 1.8rem;
 }
 
@@ -169,7 +171,6 @@
 
   .project-info-container {
     width: 90%;
-    align-items: center;
   }
 
   .project-subtitle {
@@ -178,6 +179,13 @@
 
   .description {
     font-size: 1.2rem;
+  }
+
+  .project-card {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    max-width: 90%;
   }
 }
 
@@ -200,5 +208,13 @@
 @media (max-width: 27em) {
   .title {
     font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .project-subtitle {
+    font-size: 1rem;
   }
 }
