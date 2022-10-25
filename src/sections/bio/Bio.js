@@ -91,7 +91,7 @@ export default function Bio() {
                   }
                 >
                   My hobbies include weightlifting and playing video games. I've
-                  found weightlifting to be great at molding not only the
+                  found weightlifting to be great for molding not only the
                   physical body, but the mind as well. It has taught me how
                   important qualities such as keeping to a routine, consistantly
                   improving, and producing quality work can be. Video games have
