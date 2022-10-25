@@ -64,9 +64,9 @@
     gap: 0.4rem;
   }
 
-  .bullet-dropdown-open {
+  /* .bullet-dropdown-open {
     height: 11rem;
-  }
+  } */
 
   .dropdown-icon {
     height: 15px;
