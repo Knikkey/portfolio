@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { database, collection, getDocs } from "../../firebase/config";
 
 import Filter from "../../components/filter/Filter";
@@ -18,7 +18,11 @@ const dateFilter = [
 ];
 
 export default function Projects() {
-  const [projects, setProjects] = useState(null);
+  //const [projects, setProjects] = useState(null);
+  //const [projectss, setProjectss] = useState(null);
+  const [projects, setProjects] = useState(
+    JSON.parse(window.localStorage.getItem("PROJECTS"))
+  );
   const [filter, setFilter] = useState("All languages");
   const [sort, setSort] = useState("new");
   const [error, setError] = useState(null);
@@ -30,6 +34,89 @@ export default function Projects() {
   const sortHandler = (e) => {
     setSort(e.target.value);
   };
+
+  //with state
+  // const filteredProjects = projects
+  //   ? projects.filter((project) => {
+  //       if (filter === "All languages") return true;
+  //       else {
+  //         return project.languages.includes(filter);
+  //       }
+  //     })
+  //   : null;
+
+  // const sortedProjects =
+  //   filteredProjects && sort === "new"
+  //     ? filteredProjects.sort(function (a, b) {
+  //         return b.id - a.id;
+  //       })
+  //     : filteredProjects;
+
+  // (async () => {
+  //   const projectsCol = collection(database, "projects");
+  //   try {
+  //     const snapshot = await getDocs(projectsCol);
+  //     const projectsList = snapshot.docs.map((doc) => doc.data());
+  //     setProjects(projectsList);
+  //   } catch (err) {
+  //     setError(err);
+  //   }
+  // })();
+
+  // with useRef
+  // const projects = useRef(null);
+
+  // const requestDocs = async () => {
+  //   const projectsCol = collection(database, "projects");
+  //   if (!projects.current) {
+  //     try {
+  //       const snapshot = await getDocs(projectsCol);
+  //       const projectsList = snapshot.docs.map((doc) => doc.data());
+  //       projects.current = projectsList;
+  //       setProjectss(projectsList);
+  //       console.log("fetch made");
+  //     } catch (err) {
+  //       setError(err);
+  //     }
+  //   }
+  // };
+
+  // !projects.current && requestDocs();
+
+  // const filteredProjects = projects.current
+  //   ? projects.current.filter((project) => {
+  //       if (filter === "All languages") return true;
+  //       else {
+  //         return project.languages.includes(filter);
+  //       }
+  //     })
+  //   : null;
+
+  // const sortedProjects =
+  //   filteredProjects && sort === "new"
+  //     ? filteredProjects.sort(function (a, b) {
+  //         return b.id - a.id;
+  //       })
+  //     : filteredProjects;
+
+  //with local storage
+  useEffect(() => {
+    if (!projects) {
+      const requestDocs = async () => {
+        const projectsCol = collection(database, "projects");
+        try {
+          const snapshot = await getDocs(projectsCol);
+          const projectsList = snapshot.docs.map((doc) => doc.data());
+          window.localStorage.setItem("PROJECTS", JSON.stringify(projectsList));
+        } catch (err) {
+          setError(err);
+        }
+      };
+      requestDocs();
+      const data = window.localStorage.getItem("PROJECTS");
+      setProjects(JSON.parse(data));
+    }
+  }, [projects]);
 
   const filteredProjects = projects
     ? projects.filter((project) => {
@@ -46,42 +133,6 @@ export default function Projects() {
           return b.id - a.id;
         })
       : filteredProjects;
-
-  (async () => {
-    const projectsCol = collection(database, "projects");
-    try {
-      const snapshot = await getDocs(projectsCol);
-      const projectsList = snapshot.docs.map((doc) => doc.data());
-      setProjects(projectsList);
-    } catch (err) {
-      setError(err);
-    }
-  })();
-
-  //with useRef()
-  // const projects = useRef(null);
-
-  // const requestDocs = async () => {
-  //   const projectsCol = collection(database, "projects");
-  //   try {
-  //     const snapshot = await getDocs(projectsCol);
-  //     const projectsList = snapshot.docs.map((doc) => doc.data());
-  //     projects.current = projectsList;
-  //   } catch (err) {
-  //     setError(err);
-  //   }
-  // };
-
-  // !projects && requestDocs()
-
-  // const filteredProjects = projects.current
-  //   ? projects.current.filter((project) => {
-  //       if (filter === "All languages") return true;
-  //       else {
-  //         return project.languages.includes(filter);
-  //       }
-  //     })
-  //   : null;
 
   return (
     <div className="section fadeIn">
