@@ -68,13 +68,21 @@
   }
 }
 
-@media (max-width: 39em) {
+@media (max-width: 40em) {
   .title {
     font-size: 5.4rem;
   }
 
   .occupation {
     font-size: 3rem;
+  }
+
+  .logo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin-top: 2rem;
+    padding: 0;
   }
 
   .logo {

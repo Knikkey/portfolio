@@ -3,12 +3,14 @@ import css3Icon from "./icons/css3Icon.svg";
 import javascriptIcon from "./icons/javascriptIcon.svg";
 import reactIcon from "./icons/reactIcon.svg";
 import firebaseIcon from "./icons/firebaseIcon.svg";
+import sassIcon from "./icons/sassIcon.svg";
 
 import styles from "./Namecard.module.css";
 
 const codingLanguages = [
   { logo: html5Icon, text: "HTML", alt: "html logo" },
   { logo: css3Icon, text: "CSS", alt: "css logo" },
+  { logo: sassIcon, text: "Sass/scss", alt: "sass logo" },
   { logo: javascriptIcon, text: "JavaScript", alt: "javascript logo" },
   { logo: reactIcon, text: "React", alt: "react logo" },
   { logo: firebaseIcon, text: "Firebase", alt: "firebase logo" },
