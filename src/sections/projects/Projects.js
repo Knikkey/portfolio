@@ -11,6 +11,7 @@ const langFilter = [
   { label: "Vanilla JavaScript", value: "Vanilla JavaScript" },
   { label: "React", value: "React" },
   { label: "Firebase", value: "Firebase" },
+  { label: "SASS/SCSS", value: "SASS/SCSS" },
 ];
 const dateFilter = [
   { label: "Date (newest)", value: "new" },

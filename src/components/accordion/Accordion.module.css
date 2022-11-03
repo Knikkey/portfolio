@@ -25,17 +25,17 @@
 }
 
 .bullet-dropdown-closed {
-  height: 0;
+  max-height: 0;
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 0.7s;
 
   overflow: hidden;
 }
 
 .bullet-dropdown-open {
-  height: 21rem;
+  max-height: 24rem;
   opacity: 1;
-  transition: all 0.5s;
+  transition: all 0.7s;
 }
 
 .li {
@@ -46,10 +46,6 @@
 @media (max-width: 57em) {
   .li {
     font-size: 1.2rem;
-  }
-
-  .bullet-dropdown-open {
-    height: 22rem;
   }
 }
 
@@ -63,10 +59,6 @@
   .dropdown {
     gap: 0.4rem;
   }
-
-  /* .bullet-dropdown-open {
-    height: 28rem;
-  } */
 
   .dropdown-icon {
     height: 15px;
