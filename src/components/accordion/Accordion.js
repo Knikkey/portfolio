@@ -1,5 +1,4 @@
 import dropdown from "./dropdown.svg";
-
 import styles from "./Accordion.module.css";
 
 export default function Accordion({ label, data, cl }) {
@@ -13,6 +12,7 @@ export default function Accordion({ label, data, cl }) {
       <div
         className={`${styles["project-subtitle"]} ${styles.dropdown} ${cl}`}
         onClick={openDropdown}
+        data-testid="onClickDiv"
       >
         <p className={cl}>{label}:</p>
         <img
