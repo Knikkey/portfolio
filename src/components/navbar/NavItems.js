@@ -13,7 +13,7 @@ const pages = [
 ];
 const externals = [
   {
-    name: "Github",
+    name: "GitHub",
     link: "https://github.com/Knikkey",
   },
   {

@@ -8,7 +8,6 @@ export default function Contact() {
   const [isPending, setIsPending] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [sendFailed, setSendFailed] = useState(false);
-  const [emailSent, setEmailSent] = useState(false);
 
   const form = useRef();
 
@@ -16,7 +15,6 @@ export default function Contact() {
     e.preventDefault();
     setIsPending(true);
     setSendFailed(null);
-    setEmailSent(false);
 
     emailjs
       .sendForm(
@@ -28,7 +26,7 @@ export default function Contact() {
       .then(
         (result) => {
           e.target.reset();
-          setEmailSent(true);
+
           setShowConfirm(true);
           setIsPending(false);
         },
@@ -100,7 +98,7 @@ export default function Contact() {
           {isPending ? "Loading..." : "Send"}
         </button>
       </form>
-      {emailSent && showConfirm && (
+      {showConfirm && (
         <ConfirmationModal
           sendFailed={sendFailed}
           closeHandler={closeHandler}
