@@ -18,7 +18,7 @@ describe("Contact Me", () => {
 
     //send
     cy.get(".Contact_btn__3sduE").click();
-    cy.wait(15000);
+    cy.wait(3000);
 
     cy.contains("Thank you for reaching out!").should("be.visible");
   });
