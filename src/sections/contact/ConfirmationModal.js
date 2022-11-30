@@ -12,7 +12,7 @@ export default function ConfirmationModal({ sendFailed, closeHandler }) {
         <p className="text">
           {!sendFailed
             ? "Your email has been sent. Please allow 1-2 business days for a reply."
-            : { sendFailed }}
+            : sendFailed}
         </p>
       </>
       <button className={`text ${styles.btn}`} onClick={closeHandler}>

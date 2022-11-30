@@ -7,7 +7,7 @@ import ConfirmationModal from "./ConfirmationModal";
 export default function Contact() {
   const [isPending, setIsPending] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
-  const [sendFailed, setSendFailed] = useState(false);
+  const [sendFailed, setSendFailed] = useState(null);
 
   const form = useRef();
 
@@ -26,16 +26,18 @@ export default function Contact() {
       .then(
         (result) => {
           e.target.reset();
-
-          setShowConfirm(true);
           setIsPending(false);
         },
         (error) => {
-          console.log(error.text);
-          setSendFailed(error.text);
+          setSendFailed(
+            "Your email was not sent. Please check your internet connection or try again later."
+          );
           setIsPending(false);
         }
-      );
+      )
+      .then(() => {
+        setShowConfirm(true);
+      });
   };
 
   const closeHandler = () => {
@@ -98,7 +100,7 @@ export default function Contact() {
           {isPending ? "Loading..." : "Send"}
         </button>
       </form>
-      {showConfirm && (
+      {showConfirm && !isPending && (
         <ConfirmationModal
           sendFailed={sendFailed}
           closeHandler={closeHandler}
