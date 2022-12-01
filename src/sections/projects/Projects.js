@@ -96,14 +96,6 @@ export default function Projects() {
         />
       </div>
 
-      <span className={styles["current-project"]}>
-        Currently working on a{" "}
-        <span className={styles["current-project__emph"]}>
-          fitness related app
-        </span>
-        . Coming soon!
-      </span>
-
       {!sortedProjects ? (
         <p className={styles.loading}>
           {!error ? "Loading..." : `An error occured (Error message: ${error})`}
