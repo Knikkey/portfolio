@@ -10,8 +10,9 @@ const langFilter = [
   { label: "All languages", value: "All languages" },
   { label: "Vanilla JavaScript", value: "Vanilla JavaScript" },
   { label: "React", value: "React" },
-  { label: "Firebase", value: "Firebase" },
+  { label: "TypeScript", value: "TypeScript" },
   { label: "SASS/SCSS", value: "SASS/SCSS" },
+  { label: "Firebase", value: "Firebase" },
 ];
 const dateFilter = [
   { label: "Date (newest)", value: "new" },
@@ -19,11 +20,6 @@ const dateFilter = [
 ];
 
 export default function Projects() {
-  //const [projects, setProjects] = useState(null);
-  //const [projectss, setProjectss] = useState(null);
-  // const [projects, setProjects] = useState(
-  //   JSON.parse(window.localStorage.getItem("PROJECTS"))
-  // );
   const [projects, setProjects] = useState(
     JSON.parse(window.sessionStorage.getItem("PROJECTS"))
   );
