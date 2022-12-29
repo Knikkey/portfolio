@@ -4,6 +4,7 @@ import javascriptIcon from "./icons/javascriptIcon.svg";
 import reactIcon from "./icons/reactIcon.svg";
 import firebaseIcon from "./icons/firebaseIcon.svg";
 import sassIcon from "./icons/sassIcon.svg";
+import typescriptIcon from "./icons/typescriptIcon.svg";
 
 import styles from "./Namecard.module.css";
 
@@ -14,6 +15,7 @@ const codingLanguages = [
   { logo: javascriptIcon, text: "JavaScript", alt: "javascript logo" },
   { logo: reactIcon, text: "React", alt: "react logo" },
   { logo: firebaseIcon, text: "Firebase", alt: "firebase logo" },
+  { logo: typescriptIcon, text: "TypeScript", alt: "typescript logo" },
 ];
 
 export default function Namecard() {
