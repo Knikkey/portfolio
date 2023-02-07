@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./NavItems.module.css";
-import resume from "../resume/Nicholas Bingham Resume.pdf";
+import resume from "../resume/Nicholas Bingham Resume - public.pdf";
 import menuIcon from "./menuIcon.svg";
 
 const pages = [
