@@ -8,8 +8,11 @@
 
 .projects-container {
   gap: 1rem;
-  height: 40rem;
-  padding: 2rem 0;
+  height: 60vh;
+  max-width: 80%;
+  padding: 2rem;
+  padding-top: 0;
+  margin: 2rem auto;
   overflow-y: scroll;
   align-items: center;
 }
@@ -18,12 +21,11 @@
   display: grid;
   grid-template-columns: 3fr 7fr;
 
-  max-width: 80%;
   padding: 1rem;
   gap: 2rem;
 
   border-radius: 15px;
-  border: 2px black solid;
+  border: 1px #333 solid;
   box-shadow: 0 1px 0 #777;
 }
 
@@ -126,6 +128,10 @@
 @media (max-width: 84em) {
   .dropdown-query {
     font-size: 1.2rem;
+  }
+
+  .projects-container {
+    height: 70vh;
   }
 }
 

@@ -64,8 +64,8 @@
 }
 
 .menu-icon {
-  height: 40px;
-  width: 40px;
+  height: 25px;
+  width: 25px;
 }
 
 .menu-btn--spin {
@@ -115,7 +115,7 @@
   nav {
     position: fixed;
     top: 4%;
-    right: 16%;
+    right: 13%;
     height: 0;
     overflow: hidden;
 
