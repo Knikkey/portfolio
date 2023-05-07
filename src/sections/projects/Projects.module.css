@@ -200,11 +200,17 @@
 
 @media (max-width: 27em) {
   .title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  .languages,
+  .links {
+    font-size: 1rem;
   }
 
   .description {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    overflow-wrap: normal;
   }
 
   .project-subtitle {
