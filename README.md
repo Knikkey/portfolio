@@ -8,7 +8,7 @@ View the hosted site here: [My Portfolio](https://nick-bingham.netlify.app/)
 
 ## Sections
 
-<img alt="a gif showing how to use the website" src="https://firebasestorage.googleapis.com/v0/b/portfolio-1ac15.appspot.com/o/dailyHappiness%2FdailyHappinessGif.gif?alt=media&token=0a9cc347-b3f9-4aa6-aaad-59ce186e0fa3">
+<img alt="a gif showing how to use the website" src="https://firebasestorage.googleapis.com/v0/b/portfolio-1ac15.appspot.com/o/portfoilio%2FportfolioPreviewGif.gif?alt=media&token=8bf02696-b775-4799-9e1c-c1f990a199ce">
 
 - **Home**: A quick view of some of the languages and tech I use
 - **Projects**: A detailed overview of all of my projects
