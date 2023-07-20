@@ -2,7 +2,7 @@ import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <span>
         &copy; Nicholas Bingham 2022. No rights reserved. There's no actual
         copyright. I just wanna look fancy.
@@ -13,6 +13,6 @@ export default function Footer() {
       >
         Favicon: Hipster icons created by Freepik - Flaticon
       </a>
-    </div>
+    </footer>
   );
 }
