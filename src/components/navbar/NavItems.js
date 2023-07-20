@@ -44,8 +44,8 @@ export default function NavItems() {
     <>
       <nav ref={navRef}>
         <ul className={styles["nav"]}>
-          {pages.map((page, i) => (
-            <li key={i} className={styles.li}>
+          {pages.map((page) => (
+            <li key={page.path} className={styles.li}>
               <Link
                 to={page.path}
                 className={styles["page-nav"]}
@@ -77,7 +77,7 @@ export default function NavItems() {
         >
           <img
             src={menuIcon}
-            alt="menu button"
+            alt="open/close menu"
             className={styles["menu-icon"]}
           />
         </button>
