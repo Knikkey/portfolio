@@ -75,7 +75,7 @@ export default function Projects() {
       : filteredProjects;
 
   return (
-    <div className="section fadeIn">
+    <section className="section fadeIn">
       <div className={styles["filter-container"]}>
         <Filter
           label="Filter by language"
@@ -83,7 +83,7 @@ export default function Projects() {
           handler={filterHandler}
           cl={styles.filter}
         />
-        <p className={`page-header ${styles.title}`}>My Projects</p>
+        <h1 className={`page-header ${styles.title}`}>My Projects</h1>
         <Filter
           label="Sort by"
           arr={dateFilter}
@@ -181,6 +181,6 @@ export default function Projects() {
           ))}
         </ul>
       )}
-    </div>
+    </section>
   );
 }

@@ -45,7 +45,7 @@ export default function Contact() {
   };
 
   return (
-    <div className={`${styles["form-container"]} fadeIn`}>
+    <section className={`${styles["form-container"]} fadeIn`}>
       <h1 className="page-header">Contact me</h1>
 
       <form
@@ -106,6 +106,6 @@ export default function Contact() {
           closeHandler={closeHandler}
         />
       )}
-    </div>
+    </section>
   );
 }

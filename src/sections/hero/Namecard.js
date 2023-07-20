@@ -20,7 +20,7 @@ const codingLanguages = [
 
 export default function Namecard() {
   return (
-    <div className={`${styles["namecard-container"]} fadeIn`}>
+    <section className={`${styles["namecard-container"]} fadeIn`}>
       <h1 className={styles.title}>Nicholas Bingham</h1>
       <div className={styles["occupation-container"]}>
         <h2 className={styles.occupation}>Web developer</h2>
@@ -39,6 +39,6 @@ export default function Namecard() {
           );
         })}
       </ul>
-    </div>
+    </section>
   );
 }

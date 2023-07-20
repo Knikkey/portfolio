@@ -34,7 +34,7 @@ export default function Bio() {
   return (
     <section className="section fadeIn">
       <div className={`flex-col section`}>
-        <h2 className="page-header">About Me</h2>
+        <h1 className="page-header">About Me</h1>
         {/* Bio section */}
         <div className={styles["bio-container"]}>
           <div className={`flex-col ${styles["bio-info"]}`}>
