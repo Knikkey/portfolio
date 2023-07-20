@@ -3,15 +3,12 @@
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-
   border: 1px #333 solid;
   border-radius: 15px;
   background-color: #f8f0e3;
   padding: 3rem;
-
   gap: 1rem;
   width: 75%;
-
   z-index: 2;
 }
 
@@ -22,7 +19,6 @@
   cursor: pointer;
   background-color: white;
   border-radius: 7px;
-
   align-self: center;
 }
 

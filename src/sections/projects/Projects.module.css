@@ -20,10 +20,8 @@
 .project-card {
   display: grid;
   grid-template-columns: 3fr 7fr;
-
   padding: 1rem;
   gap: 2rem;
-
   border-radius: 15px;
   border: 1px #333 solid;
   box-shadow: 0 1px 0 #777;
@@ -32,7 +30,6 @@
 .project-info-container {
   gap: 1rem;
   align-items: flex-start;
-
   padding: 2rem 0 0 4rem;
 }
 
