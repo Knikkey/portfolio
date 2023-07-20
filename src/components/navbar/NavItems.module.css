@@ -33,7 +33,6 @@
   background-color: inherit;
   font-size: 2.4rem;
   color: #664022;
-
   transition: all 0.3s;
 }
 
@@ -42,7 +41,6 @@
 .li:hover {
   color: #997355;
   animation: shake 0.8s linear;
-
   cursor: pointer;
 }
 
@@ -98,7 +96,6 @@
     right: 6%;
     background-color: rgba(0, 0, 0, 0);
     border: none;
-
     cursor: pointer;
     transition: all 0.3s;
   }
@@ -118,7 +115,6 @@
     right: 13%;
     height: 0;
     overflow: hidden;
-
     transition: all 0.4s;
     background: #f8f0e3;
   }
