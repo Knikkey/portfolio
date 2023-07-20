@@ -54,9 +54,7 @@
   width: 2rem;
   height: 2rem;
   accent-color: black;
-
   cursor: pointer;
-
   transition: all 0.1s;
 }
 
@@ -67,9 +65,7 @@
 .bio-info {
   align-items: center;
   justify-content: center;
-
   max-width: 50%;
-
   font-size: 1.8rem;
 }
 
@@ -84,7 +80,6 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-
   animation: slideshow ease-in infinite 6s;
 }
 
