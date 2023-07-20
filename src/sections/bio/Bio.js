@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-
 import pics from "./pics";
 import styles from "./Bio.module.css";
 
@@ -33,10 +32,9 @@ export default function Bio() {
   const pic = useRef();
 
   return (
-    <div className="section fadeIn">
+    <section className="section fadeIn">
       <div className={`flex-col section`}>
         <h2 className="page-header">About Me</h2>
-
         {/* Bio section */}
         <div className={styles["bio-container"]}>
           <div className={`flex-col ${styles["bio-info"]}`}>
@@ -105,6 +103,6 @@ export default function Bio() {
           <div ref={pic} className={styles.pictures}></div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
