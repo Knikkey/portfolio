@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  height: 80%;
 }
 
 .occupation-container {
@@ -12,9 +13,10 @@
 }
 
 .logo-container {
-  display: flex;
-  gap: 4rem;
-  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
   padding: 0;
 }
 
@@ -78,11 +80,8 @@
   }
 
   .logo-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 2rem;
-    padding: 0;
   }
 
   .logo {

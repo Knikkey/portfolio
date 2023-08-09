@@ -106,7 +106,7 @@ export default function Projects() {
                   {project.title}
                 </p>
                 {/* languages */}
-                <ul className={styles.flex}>
+                <ul className={`${styles.flex} ${styles["lang-container"]}`}>
                   {project.languages.map((lang) => (
                     <li key={lang}>
                       <p className={styles.languages}>{lang}</p>

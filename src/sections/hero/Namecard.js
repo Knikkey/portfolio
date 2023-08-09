@@ -5,6 +5,11 @@ import reactIcon from "./icons/reactIcon.svg";
 import firebaseIcon from "./icons/firebaseIcon.svg";
 import sassIcon from "./icons/sassIcon.svg";
 import typescriptIcon from "./icons/typescriptIcon.svg";
+import expressIcon from "./icons/expressIcon.svg";
+import nextjsIcon from "./icons/nextjsIcon.svg";
+import nodejsIcon from "./icons/nodejsIcon.svg";
+import postgresqlIcon from "./icons/postgresqlIcon.svg";
+import reduxIcon from "./icons/reduxIcon.svg";
 
 import styles from "./Namecard.module.css";
 
@@ -13,9 +18,14 @@ const codingLanguages = [
   { logo: css3Icon, text: "CSS", alt: "css logo" },
   { logo: sassIcon, text: "Sass/scss", alt: "sass logo" },
   { logo: javascriptIcon, text: "JavaScript", alt: "javascript logo" },
-  { logo: reactIcon, text: "React", alt: "react logo" },
-  { logo: firebaseIcon, text: "Firebase", alt: "firebase logo" },
   { logo: typescriptIcon, text: "TypeScript", alt: "typescript logo" },
+  { logo: reactIcon, text: "React", alt: "react logo" },
+  { logo: reduxIcon, text: "Redux", alt: "redux logo" },
+  { logo: nextjsIcon, text: "Next.js", alt: "next.js logo" },
+  { logo: nodejsIcon, text: "Node.js", alt: "node.js logo" },
+  { logo: expressIcon, text: "Express", alt: "express logo" },
+  { logo: postgresqlIcon, text: "PostgreSQL", alt: "postgresql logo" },
+  { logo: firebaseIcon, text: "Firebase", alt: "firebase logo" },
 ];
 
 export default function Namecard() {
