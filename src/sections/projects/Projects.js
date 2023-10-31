@@ -125,13 +125,15 @@ export default function Projects() {
                     </a>
                   </li>
                   <li key={project.websiteLink}>
-                    <a
-                      href={project.websiteLink}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      Website
-                    </a>
+                    {project.websiteLink && (
+                      <a
+                        href={project.websiteLink}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        Website
+                      </a>
+                    )}
                   </li>
                 </ul>
               </div>
